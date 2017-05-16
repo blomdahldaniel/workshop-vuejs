@@ -19,4 +19,4 @@ In this assignment you will be creating your own little Twitter app. The HTML an
 
 
 # Next:
-[201 Set up the project](./201-set-up.md)
+[201 Set up the project](./201-setup.md)
