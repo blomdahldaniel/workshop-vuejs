@@ -1,4 +1,4 @@
-Previous: [201 Set up the project](./201-set-up.md)
+Previous: [201 Set up the project](./201-setup.md)
 # 202 List of tweets
 Normally you would get your tweets from an api. But for now you'll be provided with a dummy-data-file that contains a couple of tweets that we'll be working with. 
 
@@ -125,4 +125,4 @@ Once this is done, we'll have a much more "real looking twitter app"
   </div>
 ```
 # Next:
-[203 Convert into component](./203-convert-into-component.md)
+[203 Convert into component](./203-convert-into-components.md)

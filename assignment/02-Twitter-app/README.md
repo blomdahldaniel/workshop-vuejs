@@ -4,7 +4,7 @@
 In this assignment you will be creating your own little Twitter app. The HTML and CSS is provided for you, what is left to do is to sugarcoat the HTML with some powerful and descriptive VueJS.
 
 ## Assignment
-- [**201** Set up the project](./201-set-up.md)
+- [**201** Set up the project](./201-setup.md)
 - [**202** List of tweets](./202-list.md)
 - [**203** Convert into component](./203-convert-into-component.md)
 - [**204** More components](./204-more-components.md)

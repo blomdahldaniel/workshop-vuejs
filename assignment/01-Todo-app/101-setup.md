@@ -1,4 +1,4 @@
-Previous: [100 Intro](./100-intro.md)
+Previous: [100 Intro](./README.md)
 
 # 101 Setup
 

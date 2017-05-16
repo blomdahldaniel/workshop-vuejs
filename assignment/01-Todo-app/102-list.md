@@ -1,4 +1,4 @@
-Previous: [101 Setup](./100-setup.md)
+Previous: [101 Setup](./101-setup.md)
 
 # 102 Create a list
 

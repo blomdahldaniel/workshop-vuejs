@@ -22,4 +22,4 @@ Lets pimp things up! Add some classes to the current elements.
 ```
 
 # Next:
-[105 sad!](./104-style.md)
+[105 Computed properties!](./105-computed-properties.md)

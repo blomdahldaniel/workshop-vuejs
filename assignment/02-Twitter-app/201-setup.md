@@ -1,4 +1,4 @@
-Previous: [200 Intro](./200-intro.md)
+Previous: [200 Intro](./README.md)
 
 # 201 Set up the new project with [vue-cli](https://github.com/vuejs/vue-cli)
 >**vue-cli** is a simple CLI for scaffolding Vue.js projects. Use vue-cli as a zero-configuration development tool for your Vue apps and component, check out the [docs](https://github.com/vuejs/vue-cli/blob/master/docs/build.md).

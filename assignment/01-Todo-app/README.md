@@ -6,7 +6,7 @@ In this assignment you will be creating your own little Todo app. The HTML and C
 We will start with just an unstyled list, then add on some predefined styling.
 
 ## Assignment
-- [**101** Set up the project](./101-set-up.md)
+- [**101** Set up the project](./101-setup.md)
 - [**102** Create a list](./102-list.md)
 - [**103** Completed todos](./103-completed.md)
 - [**104** Let's add some style!!](./104-style.md)
@@ -16,4 +16,4 @@ We will start with just an unstyled list, then add on some predefined styling.
 
 
 # Next:
-[101 Set up the project](./101-set-up.md)
+[101 Set up the project](./101-setup.md)
