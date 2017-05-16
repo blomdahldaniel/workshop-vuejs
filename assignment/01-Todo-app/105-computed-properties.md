@@ -1,7 +1,7 @@
 Previous: [104 Let's add some style](./104-style.md)
 
 ![Computed properties](http://mktcdn.uberflip.com/get-to-work.gif)
-# Computed Properties
+# 105 Computed Properties
 Okey, now we have a pretty good looking list. But we don't want the completed todos to be clumped up with the todos that is not completed.
 Let's keep them separate like this:
 

@@ -6,7 +6,7 @@ In this assignment you will be creating your own little Twitter app. The HTML an
 ## Assignment
 - [**201** Set up the project](./201-setup.md)
 - [**202** List of tweets](./202-list.md)
-- [**203** Convert into component](./203-convert-into-component.md)
+- [**203** Convert into component](./203-convert-into-components.md)
 - [**204** More components](./204-more-components.md)
 - [**205** Like my tweets](./205-like-my-tweets.md)
 - [**206** Compose new tweets](./206-compose-new-tweets.md)
