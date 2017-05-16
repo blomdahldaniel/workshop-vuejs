@@ -1,0 +1,215 @@
+body {
+    background: #eee;
+    font-family: 'Open Sans', sans-serif;
+    color: #424242;
+    font-weight: 300;
+    display:flex;
+    height: 100vh;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 25px;
+    font-size: 20px; // easier to read
+    line-height: 32px;
+}
+#vue-container{
+    width:100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+.completed{
+    color: #999;
+    text-decoration: line-through;
+}
+
+.important{
+    color: salmon;
+}
+
+code {
+    background: #ddd;
+    color: #777;
+    padding: 0 6px;
+}
+
+
+ul.todo-list{
+    list-style: none;
+    padding: 0;
+    background: #fff;
+    border-radius: 2px;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+ul.todo-list li{
+    border-bottom: 1px solid #ededed;
+    font-size: 24px;
+    padding: 10px 20px;
+}
+ul.todo-list li:last-child{
+    border-bottom: none;
+}
+
+ul.todo-list li:hover,
+ul.todo-list li:active,
+ul.todo-list li:focus{
+    cursor: pointer;
+    color: #74a992;
+    background: #fbfbfb;
+}
+ul.todo-list li.completed:hover,
+ul.todo-list li.completed:active,
+ul.todo-list li.completed:focus{
+    color: #86a497;
+}
+
+ul.todo-list li.empty-placeholder{
+    color: #999;
+    background: #fff;
+}
+ul.todo-list li.empty-placeholder:hover,
+ul.todo-list li.empty-placeholder:active,
+ul.todo-list li.empty-placeholder:focus{
+    color: #999;
+    background: #fff;
+    cursor: default;
+}
+ul.todo-list li.add-todo{
+    border-width: 4px;
+}
+ul.todo-list li.add-todo::before{
+    content: '›';
+    position: absolute;
+    top:3px;
+    color: #ddd;
+    font-weight: 400;
+    font-size:40px;
+
+}
+
+ul.todo-list li.add-todo:hover,
+ul.todo-list li.add-todo:active,
+ul.todo-list li.add-todo:focus{
+    background: inherit;
+    cursor: default;
+}
+ul.todo-list li.add-todo input{
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+    font-size: 24px;
+    font-weight: 300;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+ul.todo-list li.add-todo input::placeholder{
+    color: #ddd;
+    font-weight: 300;
+}
+.todo-list-item{
+    display: flex;
+    align-items: center;
+}
+button.btn-circle{
+    border: none;
+    height: 40px;
+    margin: 10px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 20px;
+    font-size: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+button.btn-xs{
+    margin: 5px 10px;
+    padding: 5px;
+    background: none;
+    border-radius: 3px;
+    border: 1px solid #999;
+    color: #999;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+button.delete{
+    margin-left: auto;
+    background: none;
+    color: salmon;
+    border-color: salmon;
+    transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+button.delete::before{
+    content: '╳';
+    font-size: 14px;
+    padding: 0 5px;
+}
+button.delete:hover,
+button.delete:active{
+    background: salmon;
+    border-color: salmon;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+
+button.complete{
+    border: 2px solid #5dd19d;
+    color: #5dd19d;
+    background: none;
+    transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+button.complete::before{
+    content: '✓';
+    padding: 0 5px;
+}
+
+button.complete:hover,
+button.complete:active{
+    background: #5dd19d;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+button.delete:focus,
+button.complete:focus{
+    outline: none;
+}
+
+ul.todo-list li.todos-action-bar{
+    color: #999;
+    background: #ededed;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+ul.todo-list li.todos-action-bar:hover,
+ul.todo-list li.todos-action-bar:active,
+ul.todo-list li.todos-action-bar:focus{
+    color: #999;
+    background: #eee;
+    cursor: default;
+}
+
+ul.todo-list li.todos-action-bar .amount-left-todo{
+    margin-right: auto;
+}
+ul.todo-list li.todos-action-bar .delete{
+    margin-left: 10px;
+}
