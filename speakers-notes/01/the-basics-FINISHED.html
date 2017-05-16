@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VueJS - Workshop</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- Nothing special, just some simple css -->
+    <link rel="stylesheet" href="../resources/todo-app/todo-app.css">
+</head>
+<body>
+    <div id="vue-container">
+        <h1 v-if="showMe">{{ message }}</h1>
+        <ul class="todo-list">
+            <li class="add-todo">
+                <input type="text"
+                    placeholder="Lägg till din nya upphgift här..." v-model="newTodo"
+                    v-on:keyup.enter="addTodo"
+                    v-on:keyup.esc="newTodo = ''"
+                >
+            </li>
+
+            <li class="todos-action-bar">
+                <div class="amount-left-todo">
+                    {{ uncompletedTodos.length }}
+                    att göra
+                </div>
+                <button class="btn-xs complete" @click="markAllCompleted">
+                    Avsluta alla
+                </button>
+                <button class="btn-xs delete" @click="removeAllCompleted">
+                    Radera alla avslutade
+                </button>
+            </li>
+
+
+            <li class="todo-list-item"
+                v-for="todo in uncompletedTodos"
+            >
+                <button class="btn-circle complete" v-on:click="todo.completed = !todo.completed"></button>
+
+
+                {{ todo.text }}
+
+                <button class="btn-circle delete" @click="removeTodo(todo)"></button>
+
+            </li>
+            <li v-show="uncompletedTodos.length == 0"
+                class="empty-placeholder"
+            >
+                Det finns inga uppgifter att göra!
+                <br>
+                <small>Njut så länge det varar...</small>
+            </li>
+        </ul>
+        <div v-show="completedTodos.length > 0">
+            <h3>{{ completedTodos.length }} {{ completedTodos.length | pluralizeAvslutad }}:</h3>
+            <ul>
+                <li v-for="todo in completedTodos"
+                >
+                    <span class="completed" v-on:click="todo.completed = !todo.completed">
+                        {{ todo.text }}
+                    </span>
+                    <button class="btn-circle delete" @click="removeTodo(todo)"></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#vue-container',
+            data: {
+                newTodo: '',
+                showMe: true,
+                message: 'Att göra:',
+                activeClass: 'completed',
+                todos: [
+                    {
+                        text: 'Vakna, snooza inte plz!',
+                        completed: true,
+                    },
+                    {
+                        text: 'Käka en god frukost',
+                        completed: true,
+                    },
+                    {
+                        text: 'Ta båten till Lindholmen',
+                        completed: true,
+                    },
+                    {
+                        text: 'Hålla workshop på YRGO',
+                        completed: false,
+                    },
+                    {
+                        text: 'Ta båten hem till Majorna',
+                        completed: false,
+                    },
+                    {
+                        text: 'Njuta av ledigheten och mysa med familjen!',
+                        completed: false,
+                },
+                ],
+            },
+            computed: {
+                completedTodos () {
+                    return this.todos.filter(t => t.completed)
+                },
+                uncompletedTodos () {
+                    return this.todos.filter(t => !t.completed)
+                },
+            },
+            methods: {
+                removeTodo (todo) {
+                    console.log('removeTodo', todo)
+                    this.todos.splice(this.todos.indexOf(todo), 1)
+                },
+                addTodo () {
+                    let todoText = this.newTodo.trim()
+                    if(!todoText) return
+
+                    this.todos.push({
+                        text: todoText,
+                        completed: false,
+                    })
+                    this.newTodo = ''
+                },
+                markAllCompleted () {
+                    this.todos.forEach( t => t.completed = true )
+                },
+                removeAllCompleted () {
+                    this.todos = this.todos.filter( t => !t.completed )
+                }
+            },
+            filters: {
+                pluralizeAvslutad (amount) {
+                    return amount == 1 ? 'avslutad' : 'avslutade'
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>
