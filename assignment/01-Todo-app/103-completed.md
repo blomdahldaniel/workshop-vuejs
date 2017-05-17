@@ -6,6 +6,13 @@ We want to be able to see a clear difference between the tasks that is already c
 
 #### Class binding
 Bind the class `completed` to every `<li>` element if the `todo.completed == true`.
+```html
+<!-- Denna div kommer få klassen 'myClass' -->
+<div v-bind:class="{myClass: true}"></div>
+
+<!-- Denna div kommer INTE få klassen 'isCool' -->
+<div v-bind:class="{isCool: false}"></div>
+```
 
 [Read more about class binding](https://vuejs.org/v2/guide/class-and-style.html#Binding-HTML-Classes)
 
