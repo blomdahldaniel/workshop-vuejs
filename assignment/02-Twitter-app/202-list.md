@@ -24,7 +24,7 @@ export default {
 ```
 
 ## 2. Import the tweets dummy data
-- Copy the [tweets.js](../../resources/tweets.js) file into `twitter-app/static/dummy-data/tweets.js`
+- Copy the [tweets.js](../../resources/twitter-app/tweets.js) file into `twitter-app/static/dummy-data/tweets.js`
 - Import the tweets.js file to the `App.vue` file. After that, set the imported tweets in the vue data prop.
 
 ```javascript
